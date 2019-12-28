@@ -1,0 +1,223 @@
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  text-align: center;
+  background: url(./bg2.jpg) no-repeat 50% 50%;
+  background-size: cover;
+  height: 100vh;
+  display: table;
+}
+
+#logo {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  animation: fill_anime 0.5s ease forwards 3.5s;
+}
+
+/*#logo path:nth-child(2) {
+  stroke-dasharray: 398px;
+  stroke-dashoffset: 398px;
+}*/
+#logo path:nth-child(2) {
+  stroke-dasharray: 350px;
+  stroke-dashoffset: 350px;
+  animation: line-anime 2s ease forwards;
+}
+#logo path:nth-child(3) {
+  stroke-dasharray: 320px;
+  stroke-dashoffset: 320px;
+  animation: line-anime 2s ease forwards 0.3s;
+}
+#logo path:nth-child(4) {
+  stroke-dasharray: 340px;
+  stroke-dashoffset: 340px;
+  animation: line-anime 2s ease forwards 0.6s;
+}
+#logo path:nth-child(5) {
+  stroke-dasharray: 225px;
+  stroke-dashoffset: 225px;
+  animation: line-anime 2s ease forwards 0.9s;
+}
+#logo path:nth-child(6) {
+  stroke-dasharray: 360px;
+  stroke-dashoffset: 360px;
+  animation: line-anime 2s ease forwards 1.2s;
+}
+#logo path:nth-child(7) {
+  stroke-dasharray: 315px;
+  stroke-dashoffset: 315px;
+  animation: line-anime 2s ease forwards 1.5s;
+}
+#logo path:nth-child(8) {
+  stroke-dasharray: 295px;
+  stroke-dashoffset: 295px;
+  animation: line-anime 2s ease forwards 1.8s;
+}
+#logo path:nth-child(9) {
+  stroke-dasharray: 470px;
+  stroke-dashoffset: 470px;
+  animation: line-anime 2s ease forwards 2.1s;
+}
+#logo path:nth-child(10) {
+  stroke-dasharray: 320px;
+  stroke-dashoffset: 320px;
+  animation: line-anime 2s ease forwards 2.4s;
+}
+#logo path:nth-child(11) {
+  stroke-dasharray: 242px;
+  stroke-dashoffset: 242px;
+  animation: line-anime 2s ease forwards 2.7s;
+}
+
+@keyframes line-anime {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@keyframes fill_anime {
+  from {
+    fill: transparent;
+  }
+  to {
+    fill: rgba(0, 0, 0, 0.199);
+  }
+}
+
+/*Button 1 for Login id = "proceed"*/
+@keyframes fade-anime {
+  to {
+    opacity: 1;
+  }
+}
+#proceed {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  padding: 8px 30px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 20px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  /*transition: 0.5s;*/
+  animation: fade-anime 2s ease forwards 5s;
+}
+
+#proceed:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: left;
+}
+
+#proceed:hover:before {
+  transform: scaleX(1);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+#proceed:hover {
+  color: #000;
+}
+
+#proceed:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+
+#proceed:hover:after {
+  transform: scaleX(1);
+  transition: transform 0.5s;
+  transform-origin: left;
+}
+
+/*Button 1 for Login id = "proceed-2"*/
+#proceed-2 {
+  opacity: 0;
+  position: absolute;
+  left: 50%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  padding: 8px 30px;
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 20px;
+  border: 2px solid #fff;
+  box-sizing: border-box;
+  /*transition: 0.5s;*/
+  animation: fade-anime 2s ease forwards 5.5s;
+}
+
+#proceed-2:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: left;
+}
+
+#proceed-2:hover:before {
+  transform: scaleX(1);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+#proceed-2:hover {
+  color: #000;
+}
+
+#proceed-2:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50%;
+  height: 100%;
+  background: #fff;
+  z-index: -1;
+  transform: scaleX(0);
+  transition: transform 0.5s;
+  transform-origin: right;
+}
+
+#proceed-2:hover:after {
+  transform: scaleX(1);
+  transition: transform 0.5s;
+  transform-origin: left;
+}
+
+/*Confused section*/

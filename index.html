@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="./css/css/intro.css" />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script defer src="https://unpkg.com/swup@latest/dist/swup.min.js"></script>
+    <script defer src="script.js"></script>
+
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="swup" class="welcome-section content-hidden">
+      <div class="content-wrap">
+        <ul class="fly-in-text">
+          <li>c</li>
+          <li>o</li>
+          <li>n</li>
+          <li>f</li>
+          <li>u</li>
+          <li>s</li>
+          <li>e</li>
+          <li>d</li>
+          <li>?</li>
+        </ul>
+        <a href="landing.html" class="enter-button">Yes!!! I am :-(</a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      $(function() {
+        var welcomeSection = $(".welcome-section");
+
+        setTimeout(function() {
+          welcomeSection.removeClass("content-hidden");
+        }, 800);
+
+        enterButton.on("click", function(e) {
+          e.preventDefault();
+          welcomeSection.addClass("content-hidden").fadeOut();
+        });
+      });
+    </script>
+  </body>
+</html>
