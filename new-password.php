@@ -41,65 +41,9 @@ $user_id=$_SESSION['user_id'];
               />
               <br />
               <br />
-              
-              
-                
-              
-              <!--
-              <div class="dropdown-divider"></div>
-              <small id="emailHelp" class="form-text text-muted"
-                >Enter new values</small
-              >
-
-              <label for="exampleInputName" class="text_heading">Name</label>
-              <input
-                type="text"
-                class="form-control bg-dark"
-                id="exampleInputName"
-                aria-describedby="emailHelp"
-                placeholder="Enter Name"
-                style="color: white;"
-              />
-              <br />
-              <br />
-              <label for="exampleInputRoll" class="text_heading"
-                >Roll Number</label
-              >
-              <input
-                type="text"
-                class="form-control bg-dark"
-                id="exampleInputRoll"
-                aria-describedby="emailHelp"
-                placeholder="Enter Roll Number"
-                style="color: white;"
-              />
-              <br />
-              <br />
-              <label for="exampleInputEmail1" class="text_heading"
-                >Email address</label
-              >
-              <input
-                type="email"
-                class="form-control bg-dark"
-                id="exampleInputEmail1"
-                aria-describedby="emailHelp"
-                placeholder="Enter email"
-                style="color: white;"
-              />
-
-              <small id="emailHelp" class="form-text text-muted"
-                >We'll never share your email with anyone else.</small
-              >
-            </div>
-            <br />
-            <br />
-          -->
-            <input type="submit" class="btn btn-outline-warning hover-effect" value="submit">
-            
-          </form>
-          
+            <input type="submit" class="btn btn-outline-warning hover-effect" value="submit">            
+          </form>          
         </div>
-        <!--<a href="#" style="text-decoration: none; color:paleturquoise;">Forgot Password?</a>-->
       </div>
     </div>
   </body>

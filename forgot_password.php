@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -14,17 +17,29 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="container to-center">
-      <div class="row align-items-center">
+    <div class="container">
+      <div class="row align-items-center" style="margin-top: 150px">
         <div class="col-sm-3"></div>
         <div class="col-sm-6">
           <h1 style="margin-bottom: 40px; color:orange">
-            Data Updated successfully.<br>
-            Just a Second
+            Fill it :
           </h1>
-          <META HTTP-EQUIV="Refresh" CONTENT="1; URL=logout_submit.php">
-        </div>
-        </div>
+          <form action="forgot_password_submit.php" method="POST">
+            <div class="form-group">
+             
+              <input
+                type="text"
+                class="form-control bg-dark"
+                id="exampleInputName"
+                aria-describedby="emailHelp"
+                placeholder="Username"
+                style="color: white;"
+                name="user_name"
+              />
+              <br />
+              <br />
+            <input type="submit" class="btn btn-outline-warning hover-effect" value="Submit">
+          </form>
     </div>
   </body>
 </html>

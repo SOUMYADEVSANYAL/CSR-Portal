@@ -58,7 +58,7 @@ session_start();
           </form>
           
         </div>
-        <a href="#" style="text-decoration: none; color:paleturquoise;">Forgot Password?</a>
+        <a href="forgot_password.php" style="text-decoration: none; color:paleturquoise;">Forgot Password?</a>
       </div>
     </div>
   </body>
