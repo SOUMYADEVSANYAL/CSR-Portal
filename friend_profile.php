@@ -5,6 +5,22 @@ session_start();
 $id=$_GET['friend_id'];
 $friend_name=$_GET['friend_name'];
 $friend_email=$_GET['friend_email'];
+
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "interstellar";
+
+// Create connection
+$conn = new mysqli($servername, $username, $password, $dbname);
+// Check connection
+if ($conn->connect_error) {
+    die("Connection failed: " . $conn->connect_error);
+}
+
+$sql="SELECT * FROM posts WHERE user_id='$id' ORDER BY id DESC LIMIT 3";
+$result = $conn->query($sql);
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -27,13 +43,6 @@ $friend_email=$_GET['friend_email'];
 	<link rel="stylesheet" href="css/owl.carousel.css"/>
 	<link rel="stylesheet" href="css/magnific-popup.css"/>
 	<link rel="stylesheet" href="css/style.css"/>
-	
-
-
-	<!--[if lt IE 9]>
-	  <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
-	  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-	<![endif]-->
 
 </head>
 <body>
@@ -134,24 +143,28 @@ $friend_email=$_GET['friend_email'];
 							</div>
 							
 							<ul class="resume-list">
-								<li>
-									<h2  style="color: antiquewhite;">2019</h2>
-									<h3  style="color: rgb(253, 226, 191);">Post Title</h3  style="color: antiquewhite;">
+								<?php
+
+								if ($result->num_rows > 0)
+								{
+									 while($row = $result->fetch_assoc())
+									 {
+									 	echo "<li>
+									<!--<h2  style='color: antiquewhite;'>2019</h2>-->
+									<h3  style='color: rgb(253, 226, 191);'>$row[Name]</h3  style='color: antiquewhite;'>
 									<h4>Sub post title</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor orci ut sapien scelerisque viverra. Sed trist ique justo nec mauris efficitur, ut lacinia elit dapibus. In egestas elit in dap ibus laoreet. Duis magna libero, fermentum ut facilisis id, pulvinar eget tortor. Vestibulum pelle ntesque tincidunt lorem, vitae euismod felis porttitor sed. </p>
-								</li>
-								<li>
-									<h2  style="color: antiquewhite;">2018</h2>
-									<h3  style="color: rgb(253, 226, 191);">Post Title</h3  style="color: antiquewhite;">
-									<h4>Sub post title</h4>
-									<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed porttitor orci ut sapien scelerisque viverra. Sed trist ique justo nec mauris efficitur, ut lacinia elit dapibus. In egestas elit in dap ibus laoreet. Duis magna libero, fermentum ut facilisis id, pulvinar eget tortor. Vestibulum pelle ntesque tincidunt lorem, vitae euismod felis porttitor sed. </p>
-								</li>
+									<p>$row[Content]</p>
+								</li>";
+									 }
+								}else {
+    echo "No post is available!!";
+}
+$conn->close();
+
+								?>
 							</ul>
 						</section>
 						<!-- Resume section end -->
-
-						
-						
 						<!-- Review section start -->
 						<section class="review-section spad">
 							<div class="section-title">
