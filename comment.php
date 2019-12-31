@@ -65,9 +65,9 @@ $result = $conn->query($sql);
           <li class="nav-item">
             <a class="nav-link" href="profiles.php">Profiles</a>
           </li>
-          <li class="nav-item">
+          <!--<li class="nav-item">
             <a class="nav-link" href="#">Group Chat</a>
-          </li>
+          </li>-->
           <li class="nav-item">
             <a class="nav-link" href="friends.php">Friends</a>
           </li>

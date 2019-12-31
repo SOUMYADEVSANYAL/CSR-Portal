@@ -53,12 +53,15 @@ $result = $conn->query($sql);
 
       <div class="collapse navbar-collapse " id="navbarSupportedContent">
         <ul class="navbar-nav mr-auto" style="margin-left: 800px;">
+          <li class="nav-item active">
+            <a class="nav-link" href="newsfeed.php">Home</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="profiles.php">Profiles</a>
           </li>
-          <li class="nav-item">
+         <!-- <li class="nav-item">
             <a class="nav-link" href="#">Group Chat</a>
-          </li>
+          </li>-->
           <li class="nav-item">
             <a class="nav-link" href="friends.php">Friends</a>
           </li>
@@ -78,6 +81,13 @@ $result = $conn->query($sql);
         </form>
       </div>
     </nav>
+
+    <div class="alert alert-dark alert-dismissible fade show" role="alert">
+        Welcome Back <strong><?php echo $_SESSION['user_name'] ?>!</strong>
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+          <span aria-hidden="true">x</span>
+        </button>
+      </div>
 
                                       <!-- End of the Navbar-->
                                       

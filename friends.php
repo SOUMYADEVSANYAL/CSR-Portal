@@ -54,8 +54,8 @@ $result = $conn->query($sql);
           <li class="nav-item">
             <a class="nav-link" href="profiles.php">Profiles</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Group Chat</a>
+          <li class="nav-item active">
+            <a class="nav-link" href="friends.php">Friends</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="logout_submit.php">Logout</a>
@@ -72,8 +72,7 @@ $result = $conn->query($sql);
           </button>
         </form>
       </div>
-    </nav></div><br><br>
-
+    </nav></div>
     <div class="container">
       <div class="row align-items-center">
         <div class="col-sm-3"></div>
