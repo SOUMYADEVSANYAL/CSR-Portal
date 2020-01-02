@@ -15,6 +15,18 @@ if ($conn->connect_error) {
 $sql = "SELECT * FROM posts ORDER BY id DESC";
 $result = $conn->query($sql);
 
+date_default_timezone_set('Asia/Calcutta');
+
+// 24-hour format of an hour without leading zeros (0 through 23)
+$Hour = date('G');
+if ( $Hour >= 5 && $Hour <= 11 ) {
+    $msg="Good Morning";
+} else if ( $Hour >= 12 && $Hour <= 18 ) {
+    $msg="Good Afternoon";
+} else if ( $Hour >= 19 || $Hour <= 4 ) {
+    $msg="Good Evening";
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -83,7 +95,7 @@ $result = $conn->query($sql);
     </nav>
 
     <div class="alert alert-dark alert-dismissible fade show" role="alert">
-        Welcome Back <strong><?php echo $_SESSION['user_name'] ?>!</strong>
+        <?php echo $msg;?> <strong><?php echo $_SESSION['user_name'] ?>!</strong>
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
           <span aria-hidden="true">x</span>
         </button>
