@@ -50,7 +50,7 @@ if ( $Hour >= 5 && $Hour <= 11 ) {
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-      <a class="navbar-brand" href="newsfeed.php">beTogether</a>
+      <a class="navbar-brand" href="provider_newsfeed.php">beTogether</a>
       <button
         class="navbar-toggler"
         type="button"
@@ -72,13 +72,13 @@ if ( $Hour >= 5 && $Hour <= 11 ) {
             <a class="nav-link" href="profiles.php">Profiles</a>
           </li>
          <li class="nav-item">
-            <a class="nav-link" href="request.php">Request for fund</a>
-          </li>
-         <li class="nav-item">
-            <a class="nav-link" href="show_request.php">Your Requests</a>
+            <a class="nav-link" href="contributions.php">Your Contributions</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="friends.php">Friends</a>
+            <a class="nav-link" href="friends.php">Companies</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="friends.php">NGOs</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="logout_submit.php">Logout</a>
@@ -86,11 +86,11 @@ if ( $Hour >= 5 && $Hour <= 11 ) {
         </ul>
 
         <form class="form-inline my-2 my-lg-0">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
+         <button class="btn btn-outline-success my-2 my-sm-0" type="submit">
             <a
               href="post_upload.php"
               style="text-decoration: none;color: rgb(0, 255, 64);"
-              >Post</a
+              >Contribute</a
             >
           </button>
         </form>

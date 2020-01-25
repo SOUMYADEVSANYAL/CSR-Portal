@@ -20,7 +20,7 @@
 
         if($name!="" && $email!="" && $password!="" && $filename!="")
         {
-            $sql="INSERT INTO users (Name, Email, Password, ImageSource) VALUES ('$name', '$email', '$password', '$folder')";
+            $sql="INSERT INTO fund_providers (Name, Email, Password, ImageSource) VALUES ('$name', '$email', '$password', '$folder')";
 
             if ($conn->query($sql) === TRUE) {
                 echo "<META HTTP-EQUIV='Refresh' CONTENT='0; URL=signup_success.php'>";
